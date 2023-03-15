@@ -29,13 +29,35 @@
 
 // console.log(result);
 
-const color = ['red', 'green', 'blue', 'yellow', 'grey', 'sky'];
-const max = color.length - 1;
-const min = 0;
+// const color = ['red', 'green', 'blue', 'yellow', 'grey', 'sky'];
+// const max = color.length - 1;
+// const min = 0;
 
-const index = Math.round(Math.random() * (max - min) + min);
-const bgcolor = color[index];
+// const index = Math.round(Math.random() * (max - min) + min);
+// const bgcolor = color[index];
 
-console.log(bgcolor);
+// console.log(bgcolor);
 
-document.body.style.backgroundColor = bgcolor;
+// document.body.style.backgroundColor = bgcolor;
+
+// const fruits = ["apple", "peach", "pear", "banana"];
+
+// const lastElementIndex = fruits.length - 1;
+
+// console.log(lastElementIndex);
+
+// const lastElement = fruits[lastElementIndex];
+
+// console.log(lastElement);
+
+// const message = "JavaScript is in my blood wer";
+// const pricePerWord = 10;
+
+// let words = message.split(' ').length * pricePerWord;
+// console.log(words);
+
+let title = "Arrays for begginers";
+
+let words = title.toLowerCase().split(' ').join('-');
+
+console.log(words);
