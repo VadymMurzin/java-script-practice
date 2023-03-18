@@ -56,8 +56,61 @@
 // let words = message.split(' ').length * pricePerWord;
 // console.log(words);
 
-let title = "Arrays for begginers";
+// let title = "Arrays for begginers";
 
-let words = title.toLowerCase().split(' ').join('-');
+// let words = title.toLowerCase().split(' ').join('-');
 
-console.log(words);
+// console.log(words);
+
+//------------Exercise 2/16--------------//
+
+// function makeArray(firstArray, secondArray, maxLength) {
+//   if (firstArray.concat(secondArray).length === maxLength) {
+//     return firstArray.concat(secondArray);
+//   } else if (firstArray.concat(secondArray) !== maxLength) {
+//     return firstArray.concat(secondArray).slice(0, maxLength);
+//   }
+// }
+
+// console.log(makeArray(["Earth", "Jupiter"], ["Neptune", "Uranus"], 2));
+
+//------------Exercise 2/18--------------//
+
+// function calculateTotal(number) {
+//   let sum = 0;
+//   for (let i = 1; i <= number; i += 1) {
+//     sum += i;
+//   }
+//   return sum;
+// }
+
+// console.log(calculateTotal(3));
+
+//------------Exercise 2/21--------------//
+
+// function findLongestWord(string) {
+//   const words = string.toLowerCase().split(" ");
+//   let maxWords = "";
+
+//   for (let i = 0; i < words.length; i += 1) {
+//     if (words[i].length > maxWords.length) {
+//       maxWords = words[i];
+//     }
+//   }
+//   return maxWords;
+// }
+
+// console.log(findLongestWord("JavaScript is in my blood"));
+
+//------------Exercise 2/22--------------//
+
+function createArrayOfNumbers(min, max) {
+  const numbers = [];
+
+  for (let i = min; i <= max; i += 1) {
+    numbers.push(i);
+  }
+  return numbers;
+}
+
+console.log(createArrayOfNumbers(29, 34));
