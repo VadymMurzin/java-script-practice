@@ -104,13 +104,72 @@
 
 //------------Exercise 2/22--------------//
 
-function createArrayOfNumbers(min, max) {
-  const numbers = [];
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
 
-  for (let i = min; i <= max; i += 1) {
-    numbers.push(i);
+//   for (let i = min; i <= max; i += 1) {
+//     numbers.push(i);
+//   }
+//   return numbers;
+// }
+
+// console.log(createArrayOfNumbers(29, 34));
+
+//------------Exercise 2/23--------------//
+
+// function filterArray(numbers, value) {
+//   const numArray = [];
+
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] > value) {
+//       numArray.push(numbers[i]);
+//     }
+//   }
+//   return numArray;
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5, 6, 7, 8], 7));
+
+//------------Exercise 2/25--------------//
+
+// function getCommonElements(array1, array2) {
+//   const numArray = [];
+
+//   for (let i = 0; i <= array1.length; i++) {
+//     if (array2.includes(array1[i])) numArray.push(array1[i]);
+//   }
+
+//   return numArray;
+// }
+
+// console.log(getCommonElements([1, 2, 3, 4, 5, 6, 7, 8], [3, 5, 9, 6]));
+
+// function getCommonElements(array1, array2) {
+//   const commonElements = [];
+//   for (let i = 0; i < array1.length; i++) {
+//     if (array2.includes(array1[i])) {
+//       commonElements.push(array1[i]);
+//     }
+//   }
+//   return commonElements;
+// }
+
+function filterArray(numbers, value) {
+  // Change code below this line
+  const filteredNumbers = [];
+
+  for (let i of numbers) {
+    const number = numbers[i];
+
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
   }
-  return numbers;
+
+  return filteredNumbers;
+  // Change code above this line
 }
 
-console.log(createArrayOfNumbers(29, 34));
+console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+
