@@ -154,22 +154,128 @@
 //   return commonElements;
 // }
 
-function filterArray(numbers, value) {
+// function filterArray(numbers, value) {
+//   // Change code below this line
+//   const filteredNumbers = [];
+
+//   for (let i of numbers) {
+//     const number = numbers[i];
+
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+
+//   return filteredNumbers;
+//   // Change code above this line
+// }
+
+// console.log(filterArray([1, 2, 3, 4, 5], 3));
+
+// const apartment = {
+//   descr: "Spacious apartment in the city center",
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// // Change code below this line
+// const keys = Object.keys(apartment);
+
+// for (const key of keys) {
+//   values.push(apartment[key]);
+// }
+
+// console.log(values);
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   // Change code below this line
+//   const values = Object.values(salaries);
+//   for (let key in values) {
+//     if (typeof values[key] === "number") {
+//       totalSalary += values[key];
+//     }
+//   }
+//   // Change code above this line
+//   return totalSalary;
+// }
+
+// console.log(countTotalSalary({ mango: 100, poly: 150, alfred: 80 }));
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // // Change code below this line
+// // const keys = Object.keys(apartment);
+// // const values = Object.values(apartment);
+
+// for (const key of colors) {
+//   hexColors.push(key.hex);
+//   rgbColors.push(key.rgb)
+// }
+
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// const atTheOldToad = {
+//   potions: ["Speed potion", "Dragon breath", "Stone skin"],
+//   addPotion(potionName) {
+//     // Change code below this line
+
+//     return this.potions.push(potionName);
+
+//     // Change code above this line
+//   },
+// };
+
+// console.log(addPotion("Invisibility"));
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Dragon breath", price: 780 },
+    { name: "Stone skin", price: 520 },
+  ],
   // Change code below this line
-  const filteredNumbers = [];
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    const potionIndex = this.potions.findIndex(
+      (potion) => potion.name === newPotion.name
+    );
 
-  for (let i of numbers) {
-    const number = numbers[i];
-
-    if (number > value) {
-      filteredNumbers.push(number);
+    if (potionIndex !== -1) {
+      return `Error! Potion ${newPotion.name} is already in your inventory!`;
     }
-  }
 
-  return filteredNumbers;
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    const potionIndex = this.potions.findIndex(
+      (potion) => potion.name === potionName
+    );
+
+    if (potionIndex === -1) {
+      return `Potion ${potionName} is not in inventory!`;
+    }
+
+    this.potions.splice(potionIndex, 1);
+  },
+  updatePotionName(oldName, newName) {
+    const potion = this.potions.find((potion) => potion.name === oldName);
+
+    if (!potion) {
+      return `Potion ${oldName} is not in inventory!`;
+    }
+
+    potion.name = newName;
+  },
   // Change code above this line
-}
-
-console.log(filterArray([1, 2, 3, 4, 5], 3));
-
-
+};
