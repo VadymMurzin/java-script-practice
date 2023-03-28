@@ -334,27 +334,44 @@
 // console.log(filterArray([1, 2, 3, 4, 5], 5));
 // console.log(filterArray([12, 24, 8, 41, 76], 38));
 
-function changeEven(numbers, value) {
-  const arr = [];
+// function changeEven(numbers, value) {
+//   const arr = [];
 
-  numbers.forEach((number) => {
-    arr.push(number);
-    
-  });
+//   numbers.forEach((number) => {
+//     arr.push(number);
 
-  for (let i = 0; i < arr.length; i += 1) {
-    if (arr[i] % 2 === 0) {
-      arr[i] = arr[i] + value;
-    }
-  }
+//   });
 
-  // numbers.forEach((number) => {
-  //   if (number % 2 === 0) {
-  //     console.log(newArrayNumbers.push(number + value));
-  //   }
-  // });
+//   for (let i = 0; i < arr.length; i += 1) {
+//     if (arr[i] % 2 === 0) {
+//       arr[i] = arr[i] + value;
+//     }
+//   }
 
-  return arr;
-}
+//   // numbers.forEach((number) => {
+//   //   if (number % 2 === 0) {
+//   //     console.log(newArrayNumbers.push(number + value));
+//   //   }
+//   // });
 
-console.log(changeEven([1, 2, 3, 4, 5], 10));
+//   return arr;
+// }
+
+// console.log(changeEven([1, 2, 3, 4, 5], 10));
+
+const players = [
+  { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+  { name: "Poly", playtime: 469, gamesPlayed: 2 },
+  { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+  { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+];
+// Change code below this line
+
+const totalAveragePlaytimePerGame = players.reduce(
+  (total, { playtime, gamesPlayed }) => {
+    return total + playtime / gamesPlayed;
+  },
+  0
+);
+
+console.log(totalAveragePlaytimePerGame);
